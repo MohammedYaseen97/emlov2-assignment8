@@ -1,3 +1,5 @@
+## Pytest output:
+```bash
 ==================================================================== test session starts =====================================================================
 platform linux -- Python 3.9.13, pytest-7.2.0, pluggy-1.0.0
 rootdir: /home/ec2-user/emlov2-assignment8, configfile: pyproject.toml
@@ -31,7 +33,10 @@ test_serve/test_captum.py::test_captum[127.0.0.1-cifar] PASSED                  
 
 (22 durations < 0.005s hidden.  Use -vv to show these durations.)
 ===================================================================== 11 passed in 3.94s =====================================================================
+```
 
+## Metrics output:
+```bash
 # HELP ts_inference_latency_microseconds Cumulative inference duration in microseconds
 # TYPE ts_inference_latency_microseconds counter
 ts_inference_latency_microseconds{uuid="8f82ff02-1c71-44a6-81af-5c173875db09",model_name="cifar",model_version="default",} 5939648.899000005
@@ -41,3 +46,4 @@ ts_queue_latency_microseconds{uuid="8f82ff02-1c71-44a6-81af-5c173875db09",model_
 # HELP ts_inference_requests_total Total number of inference requests.
 # TYPE ts_inference_requests_total counter
 ts_inference_requests_total{uuid="8f82ff02-1c71-44a6-81af-5c173875db09",model_name="cifar",model_version="default",} 66.0
+```
