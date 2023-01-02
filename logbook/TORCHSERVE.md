@@ -48,6 +48,7 @@ test_serve/test_captum.py::test_captum[127.0.0.1-cifar] PASSED                  
 
 ## Tensorboard output:
 I ran into an issue here, tensorboard failed to log the runs of the pytorch_profiler even after following the same procedure :(
+
 ![tensorboard_experiment.png](../test_serve/tensorboard%20experiment.png)
 
 ## Metrics output:
