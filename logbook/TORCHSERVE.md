@@ -1,6 +1,10 @@
+# EMLOv2 Assignment 08 Observations and Results
+## Description:
+This file aims to log and store the results and observations of serving a pytorch model as an API in a TorchServe environment. We have logged the correctness of output, their response times, the model explainability, metrics and performance logs.
+
 ## Pytest output:
 ```bash
-==================================================================== test session starts =====================================================================
+========================================================== test session starts ==========================================================
 platform linux -- Python 3.9.13, pytest-7.2.0, pluggy-1.0.0
 rootdir: /home/ec2-user/emlov2-assignment8, configfile: pyproject.toml
 plugins: anyio-3.6.2, hydra-core-1.2.0
@@ -18,7 +22,7 @@ test_serve/test_api.py::test_api[127.0.0.1-cifar-8_ship.png] PASSED             
 test_serve/test_api.py::test_api[127.0.0.1-cifar-9_cat.png] PASSED                                                                                     [ 90%]
 test_serve/test_captum.py::test_captum[127.0.0.1-cifar] PASSED                                                                                         [100%]
 
-===================================================================== slowest durations ======================================================================
+=========================================================== slowest durations ===========================================================
 0.19s call     test_serve/test_api.py::test_api[127.0.0.1-cifar-2_truck.png]
 0.19s call     test_serve/test_api.py::test_api[127.0.0.1-cifar-3_deer.png]
 0.18s call     test_serve/test_captum.py::test_captum[127.0.0.1-cifar]
@@ -32,8 +36,19 @@ test_serve/test_captum.py::test_captum[127.0.0.1-cifar] PASSED                  
 0.06s call     test_serve/test_api.py::test_api[127.0.0.1-cifar-4_automobile.png]
 
 (22 durations < 0.005s hidden.  Use -vv to show these durations.)
-===================================================================== 11 passed in 3.94s =====================================================================
+=========================================================== 11 passed in 3.94s ===========================================================
 ```
+
+## Captum output:
+### Image:
+![1_truck_orig.png](../test_serve/1_truck_orig.png)
+
+### IGs:
+![1_truck_captum.png](../test_serve/1_truck_captum.png)
+
+## Tensorboard output:
+I ran into an issue here, tensorboard failed to log the runs of the pytorch_profiler even after following the same procedure :(
+![tensorboard_experiment.png](../test_serve/tensorboard%20experiment.png)
 
 ## Metrics output:
 ```bash
